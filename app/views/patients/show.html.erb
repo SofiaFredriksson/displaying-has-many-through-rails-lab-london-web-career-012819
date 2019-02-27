@@ -1,0 +1,11 @@
+<h1>Patient: <%= @patient.name %></h1>
+
+<% i = 1 %>
+<% @patient.appointments.each do |appointment| %>
+  <b>Appointment <%= i %>:<br/>
+  Date and Time: </b><%= appointment.appointment_datetime.to_formatted_s(:long) %><br/>
+  <b>Doctor: </b><%= link_to appointment.doctor.name, doctor_path(appointment.doctor) %> <br/>
+<% i += 1 %>
+
+<br/><br/>
+  <% end %>

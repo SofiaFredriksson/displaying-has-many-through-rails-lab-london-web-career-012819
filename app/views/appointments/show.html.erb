@@ -1,0 +1,5 @@
+<h1>Appointment</h1>
+
+<b>Date:</b> <%= @appointment.appointment_datetime.to_formatted_s(:long) %><br />
+<b>Patient:</b> <%= @appointment.patient.name %><br />
+<b>Doctor:</b> <%= @appointment.doctor.name %><br />
